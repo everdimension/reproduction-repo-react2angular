@@ -1,0 +1,22 @@
+{
+  "name": "react2angular-bug-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3"
+  },
+  "dependencies": {
+    "angular": "^1.7.5",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react2angular": "^4.0.4"
+  }
+}
