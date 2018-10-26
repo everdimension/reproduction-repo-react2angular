@@ -17,7 +17,7 @@ ng.module('app', [ngHelloComponent]).component('someComponent', {
       </p>
       <div class="component-box">
         <i>angular component</i>
-        <p>True value: {{vm.value.name}}</p>
+        <p>True value: <span class="value">{{vm.value.name}}</span></p>
       </div>
       <div class="component-box">
         <i>react component</i>

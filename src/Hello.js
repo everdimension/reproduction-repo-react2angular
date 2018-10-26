@@ -13,7 +13,14 @@ export class Hello extends React.Component {
     return (
       <div>
         <button onClick={() => this.forceUpdate()}>force rerender</button>
-        <p>Passed name is {this.props.value.name}</p>
+        <p>
+          Passed name is <span className="value">{this.props.value.name}</span>
+          <small>
+            <i style={{ color: '#979797' }}>
+              {' <--'} doesn't change when it should
+            </i>
+          </small>
+        </p>
       </div>
     );
   }
