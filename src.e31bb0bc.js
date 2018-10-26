@@ -64072,7 +64072,13 @@ function (_React$Component) {
         onClick: function onClick() {
           return _this.forceUpdate();
         }
-      }, "force rerender"), _react.default.createElement("p", null, "Passed name is ", this.props.value.name));
+      }, "force rerender"), _react.default.createElement("p", null, "Passed name is ", _react.default.createElement("span", {
+        className: "value"
+      }, this.props.value.name), _react.default.createElement("small", null, _react.default.createElement("i", {
+        style: {
+          color: '#979797'
+        }
+      }, ' <--', " doesn't change when it should"))));
     }
   }]);
 
@@ -64116,7 +64122,7 @@ root.appendChild(someComponent);
 document.body.appendChild(root);
 
 _angular.default.module('app', [_Hello.ngHelloComponent]).component('someComponent', {
-  template: "\n    <div>\n      <p>\n        <button ng-click=\"vm.setNextValue()\">setNextValue</button>\n      </p>\n      <div class=\"component-box\">\n        <i>angular component</i>\n        <p>True value: {{vm.value.name}}</p>\n      </div>\n      <div class=\"component-box\">\n        <i>react component</i>\n        <hello-component value=\"vm.value\"></hello-component>\n      </div>\n\n      <div class=\"component-box\">\n        <i>true value</i>\n        <pre>{{vm.getValueJson()}}</pre>\n      </div>\n    </div>\n  ",
+  template: "\n    <div>\n      <p>\n        <button ng-click=\"vm.setNextValue()\">setNextValue</button>\n      </p>\n      <div class=\"component-box\">\n        <i>angular component</i>\n        <p>True value: <span class=\"value\">{{vm.value.name}}</span></p>\n      </div>\n      <div class=\"component-box\">\n        <i>react component</i>\n        <hello-component value=\"vm.value\"></hello-component>\n      </div>\n\n      <div class=\"component-box\">\n        <i>true value</i>\n        <pre>{{vm.getValueJson()}}</pre>\n      </div>\n    </div>\n  ",
   controller: function controller() {
     var ctrl = this;
     ctrl.value = {};
@@ -64167,7 +64173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49546" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60904" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
